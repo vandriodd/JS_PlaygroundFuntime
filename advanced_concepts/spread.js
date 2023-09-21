@@ -21,8 +21,6 @@ const obj2 = {
 };
 console.log(obj2); // {first: 'a', second: 'b', third: 'd', fourth: 'e'}
 
-//
-
 /* const full = Object.assign({}, obj1, obj2);
 console.log(full); */ // Assigns all properties of objects to a new object
 
