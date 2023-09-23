@@ -1,16 +1,15 @@
-// Nullish coalescing → similar to logical OR operator, but only returns the right-hand side if the left-hand is `null` or `undefined`
+// Nullish coalescing → similar to logical OR operator, but it allows for more specific handling of null or undefined values but not when the expression is simply falsy
 
-if (true) {
-}
+// ↓ Values considered falsy ↓
 
-if (false) {
-}
+if (undefined);
+if (null);
+if (0);
+if ('');
 
-if (undefined) {
-}
+// ↓ Syntax ↓
+const x = '';
 
-if (0) {
-}
-
-if ('') {
-}
+// `x` is the expression that is evaluated and checked for being null or undefined
+// `'default'` is the fallback value that will be used if x is null or undefined
+const val = x ?? 'default'; // → ''
