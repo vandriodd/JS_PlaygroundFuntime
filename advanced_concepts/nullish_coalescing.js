@@ -1,7 +1,21 @@
 // Nullish coalescing → similar to logical OR operator, but it allows for more specific handling of null or undefined values but not when the expression is simply falsy
 
-// ↓ Values considered falsy ↓
+// ↓ Values considered truthy ↓
+if (true);
+if ({});
+if ([]);
+if (42);
+if ('0');
+if ('false');
+if (new Date());
+if (-47);
+if (12n);
+if (3.14);
+if (-3.14);
+if (Infinity);
+if (-Infinity);
 
+// ↓ Values considered falsy ↓
 if (undefined);
 if (null);
 if (0);
