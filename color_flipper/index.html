@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="icon.png" />
+    <title>Color flipper</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Color flipper</h1>
+      <ul class="mode-selector">
+        <li>
+          <label>
+            <input
+              id="simple"
+              type="radio"
+              name="mode"
+              value="simple"
+              checked
+            />
+            Simple
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="hex" type="radio" name="mode" value="hex" />
+            Hex
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="content">
+        <h1>Background color: <span class="color-code"></span></h1>
+        <button type="button">Click me!</button>
+      </div>
+    </main>
+  </body>
+</html>
