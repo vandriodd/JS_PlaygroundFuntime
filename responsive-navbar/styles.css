@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --bg-color: #f1f1f1;
+  --content-color: #333;
+  --accent-color: #df9f31;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--content-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  background-color: var(--bg-color);
+  color: var(--content-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 75px);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  gap: 0.5rem;
+  font-family: var(--title-font);
+}
+
+.nav-header img {
+  width: 30px;
+  height: 30px;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.links a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.socials i {
+  font-size: 3rem;
+}
+
+.socials a {
+  color: var(--content-color);
+  transition: transform 0.5s, color 0.5s;
+}
+
+.socials a:hover {
+  transition: all 0.5s;
+  color: var(--accent-color);
+}
+
+.socials li {
+  transition: transform 0.5s;
+}
+
+.socials li:hover {
+  transform: scale(1.5);
+  transition: all 0.5s;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle.active i {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 850px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-header {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .links a {
+    color: var(--content-color);
+    font-size: 1rem;
+    text-transform: capitalize;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+  }
+
+  .links a:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding-left: 1.5rem;
+  }
+
+  .links {
+    display: none;
+    transition: all 0.3s linear;
+  }
+
+  .show-links {
+    display: block;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--content-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.5s, transform 0.5s;
+  }
+
+  .nav-toggle:hover {
+    color: var(--accent-color);
+    transform: rotate(90deg);
+  }
+
+  .nav-toggle.active + .links {
+    display: flex;
+  }
+}
