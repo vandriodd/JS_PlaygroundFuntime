@@ -5,9 +5,5 @@ const className = "show-links"
 const linksClassList = linksList.classList
 
 navToggle.addEventListener("click", () => {
-  if (linksClassList.contains(className)) {
-    linksClassList.remove(className)
-  } else {
-    linksClassList.add(className)
-  }
+  linksClassList.toggle(className)
 })
