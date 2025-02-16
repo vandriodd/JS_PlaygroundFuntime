@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "aeonik";
+  src: url("/assets/fonts/AeonikTRIAL-Regular.otf") format("opentype");
+}
+
+:root {
+  --text: #e7eeef;
+  --background: #0d1414;
+  --primary: 175, 204, 206;
+  --secondary: #3e6b6e;
+  --accent: #77b4b8;
+  --btn-radius: 8px;
+  font-family: "aeonik", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: var(--background);
+  display: grid;
+  place-content: center;
+}
+
+header {
+  color: var(--text);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.title {
+  font-size: 48px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.title-decorator {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(var(--primary)),
+    var(--secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: var(--btn-radius);
+}
+
+button:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+.start {
+  background-color: rgb(var(--primary));
+  border: 0;
+  color: var(--background);
+}
+
+.start:hover {
+  box-shadow: 0 10px 30px rgb(var(--primary), 0.2);
+}
+
+.finish {
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.finish span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.finish:hover {
+  color: var(--text);
+}
+
+.finish:hover span {
+  width: 225%;
+  height: 562.5px;
+}
+
+.finish:active {
+  color: var(--text);
+}
